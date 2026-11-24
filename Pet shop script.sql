@@ -272,7 +272,7 @@ s.nome_servico,
     
 SELECT c.nome, COUNT(v.id) AS qtd, SUM(v.valor_total) AS total
 	FROM clientes c
-    JOIN bendas v ON v.cliente_id = c.id
+    JOIN vendas v ON v.cliente_id = c.id
 GROUP BY c.id, c.nome
 ORDER BY total DESC;
 
